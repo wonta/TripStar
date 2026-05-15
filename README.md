@@ -3,7 +3,7 @@
 </div>
 <p align="center">
   <img src="https://img.shields.io/badge/license-GPL--2.0-orange">
-  <img src="https://img.shields.io/badge/version-v2.0.0-green">
+  <img src="https://img.shields.io/badge/version-v2.1.0-green">
   <img src="https://img.shields.io/badge/Docker-Build-blue?logo=docker">
   <img src="https://img.shields.io/badge/python-3.10+-blue.svg">
   <img src="https://img.shields.io/badge/vue-3.x-brightgreen.svg">
@@ -43,6 +43,7 @@
 * **多智能体协作协同**: 采用分工明确的多个 Agent（如天气预报员、酒店推荐专家），通过工作流 (Workflow) 协同完成复杂的旅行规划任务。
 * **知识图谱可视化**: 将生成的行程数据实时转换为节点关系图，直观展示"城市-天数-行程节点-预算"的空间结构。
 * **沉浸式伴游 AI 问答**: 在生成报告后，提供悬浮式 AI 问答窗口（左下角），AI 拥有完整行程的上下文记忆，用户可随时针对行程细节（如票价、适宜性）进行追问。
+* **多城市行程规划**: 支持在一次旅行中规划多个城市，动态添加城市并设置停留天数，系统自动计算总行程天数。城际移动日智能标注交通建议，预算面板独立统计城际交通费用，天气面板按城市分别展示，知识图谱以多城市拓扑呈现完整路线。
 * **奢华暗黑玻璃拟物风**: 全新设计的暗黑系玻璃拟物化 (Dark Luxury Glassmorphism) 界面，提供极具沉浸感的高级视觉体验。
 ---
 > 举个例子要去中国——西安玩耍，只需要填写地点、日期、偏好设置，即可等待行程规划的结果，一眼预览如何安排旅游景点
@@ -288,7 +289,7 @@ TripStar/
 - [x] ~~可查看历史计划支持，通过任务和后端持久化解决~~
 - [x] ~~支持代理配置 (HTTP/SOCKS5) 以确保国内可用 Google 服务~~
 - [x] ~~修改导出图片的外观，增加地图，提高可读性~~
-- [ ] 支持多城市旅行
+- [x] ~~支持多城市旅行~~
 - [ ] 添加小红书链接以及美食推荐增强
 - [ ] 前端优化
 

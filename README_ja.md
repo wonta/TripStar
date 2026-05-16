@@ -84,14 +84,14 @@ cd backend
 # Xiaohongshu用Node.js 依存関係をインストール
 npm install
 
-# 仮想環境を作成
-python -m venv .venv
+# uv で仮想環境を作成
+uv venv .venv
 
 # 仮想環境をアクティベート
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
 # プロジェクトの依存関係をインストール
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # .env に API KEY などを記入
 cp .env.example .env
@@ -113,7 +113,10 @@ cd frontend
 # npmで依存関係のインストール
 npm install
 
-# .env を編集
+# 設定ファイルをコピーし、Key を記入
+cp .env.example .env
+# [必須] VITE_AMAP_WEB_KEY
+# [必須] VITE_AMAP_WEB_JS_KEY
 # フロントエンド用に `index.html` へ 高徳Security JSCodeの注入が必要なことに注意
 
 # Viteサーバーの起動

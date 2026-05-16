@@ -196,14 +196,14 @@ cd backend
 # 安装小红书签名引擎的 Node.js 依赖
 npm install
 
-# 创建虚拟环境
-python -m venv .venv
+# 使用 uv 创建虚拟环境并安装依赖
+uv venv .venv
 
 # 激活虚拟环境
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
 # 安装项目依赖包
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # 复制配置文件并填入相应的 API KEY
 cp .env.example .env
@@ -227,7 +227,8 @@ cd frontend
 # 使用 npm (或 pnpm/yarn) 安装依赖
 npm install
 
-# 配置前端环境变量，创建 .env 文件
+# 复制配置文件并填入相应的 Key
+cp .env.example .env
 # [必填] VITE_AMAP_WEB_KEY 与后端保持一致
 # [必填] VITE_AMAP_WEB_JS_KEY 必须是 Web端(JS API) 类型的key
 # 另外，由于 JS API 2.0 政策要求，**还需要在 index.html 注入你的安全密钥(securityJsCode)**

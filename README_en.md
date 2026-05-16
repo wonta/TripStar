@@ -174,14 +174,14 @@ cd backend
 # Install Node.js dependencies for Xiaohongshu signature engine
 npm install
 
-# Create virtual environment
-python -m venv .venv
+# Create virtual environment with uv
+uv venv .venv
 
 # Activate virtual environment
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
 # Install project dependencies
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # Copy config and fill your API KEYs
 cp .env.example .env
@@ -204,7 +204,8 @@ cd frontend
 # Install dependencies (npm/pnpm/yarn)
 npm install
 
-# Set frontend environment config.
+# Copy config and fill your Keys
+cp .env.example .env
 # [Required] VITE_AMAP_WEB_KEY (Same as backend)
 # [Required] VITE_AMAP_WEB_JS_KEY 
 # **MUST ALSO inject Security JSCode in index.html (AMap API v2.0 requirement)**
